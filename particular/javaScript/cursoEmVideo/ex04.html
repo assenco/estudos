@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: cadetblue;
+            color: aliceblue;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">Clique</div>
+    <script>
+        //var p1 = window.document.getElementsByTagName('p')      //seleciona as tags p por nome p1
+        /*
+        var p1 = window.document.getElementsByTagName('p')[0]      //seleciona a primeira tag p por nome p1
+        window.document.write(p1.innerText)     //escreve o que esta dentro do p1(innerText mostra o que esta dentro da variavel)
+        */
+       var d = window.document.querySelector('div#msg')     //seleciona a div usando .querySelector('div#Id')
+        d.style.background = 'blue'     //muda o estilo da variavel "d" para o estilo especificado
+    </script>
+</body>
+</html>
