@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            background-color: rgb(31, 61, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--onclick ->diz que quando clicar na div vai ser executado a funçaõ clicar()-->
+        <p>Interaja</p>
+    </div>
+
+    <script>
+        function clicar() {
+            var a = document.getElementById('area')     <!--pode colocar essa linha para fora dessa funcao para ela funcionar em todas as funcoes juntas--> 
+            a.innerText = 'clicou'
+            a.style.backgroundColor='red'
+        }
+
+        function entrar() {
+            var a = document.getElementById('area')
+            a.innerText = 'entrou'
+        }
+
+        function sair() {
+            var a = document.getElementById('area')
+            a.innerText = 'saiu'
+        }
+    </script>
+</body>
+</html>

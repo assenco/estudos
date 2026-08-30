@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d" style="background-color: blue; color: aliceblue; font-family: Arial, Helvetica, sans-serif; width: 200px; height: 200px; line-height: 200px; text-align: center;">Aqui</div>
+
+    <script>
+        let quadrado = document.getElementById('d')
+
+        function entrar(){
+            quadrado.style.background = 'red'
+        }
+
+        function sair(){
+            quadrado.style.background = 'green'
+        }
+
+        function clicar(){
+            quadrado.innerText = 'clicou'
+        }
+        quadrado.addEventListener('mouseenter', entrar)
+        quadrado.addEventListener('mouseout', sair)
+        quadrado.addEventListener('click', clicar)
+    </script>
+</body>
+</html>

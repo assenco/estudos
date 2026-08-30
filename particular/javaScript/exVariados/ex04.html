@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="p" type="number">
+    <input id="a" type="number">
+    <button id="b">Calcular</button>
+    <div id="d" style="height: 200px; width: 200px; border: 50px; border-radius: 30px; border-color: black; text-align: center; line-height: 200px;"><p id="r"></p></div>
+
+    <script>
+        let txt1 = document.getElementById('p')
+        let txt2 = document.getElementById('a')
+        let botao = document.getElementById('b')
+
+        function imc(){
+            
+            let txt3 = document.getElementById('r')
+            let div = document.getElementById('d')
+
+            let peso = Number(txt1.value)
+            let altura = Number(txt2.value)
+
+            let resultado = peso / (altura*altura)
+
+            txt3.innerText = resultado.toFixed(1)
+
+            if(resultado<18.5) div.style.background = 'yellow'
+            else if(resultado>=18.5 && resultado<=24.9) div.style.background = 'green'
+            else div.style.background = 'red'
+        }
+
+    botao.addEventListener('click', imc)
+    </script>
+</body>
+</html>

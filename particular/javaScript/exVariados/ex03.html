@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="t" type="number">
+    <button id="b">Calcular</button>
+    <p id="p"></p>
+
+    <script>
+        let botao = document.getElementById('b')
+        let texto = document.getElementById('t')
+        let conversao = document.getElementById('p')
+
+        function converter(){
+            
+            let valor = Number(texto.value)
+            let resultado = valor / 5
+        
+            conversao.innerText = resultado
+        }
+        b.addEventListener('click', converter)
+    </script>
+</body>
+</html>
