@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Validador de Turno</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f4; transition: 0.5s; }
+        input { padding: 10px; font-size: 1rem; }
+        button { padding: 10px; font-size: 1rem; cursor: pointer; }
+        #mensagem { margin-top: 30px; font-size: 1.3rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Turnos</h1>
+    <p>Que horas são agora? (Digite apenas a hora inteira, ex: 14, 22, 6)</p>
+    <input type="number" id="txtHora" min="0" max="23">
+    <button id="btnVerificar">Verificar</button>
+
+    <div id="mensagem">Aguardando horário...</div>
+
+    <script>
+
+        let txt = document.getElementById('txtHora')
+        let botao = document.getElementById('btnVerificar')
+        let mens = document.getElementById('mensagem')
+
+        function clicar(){
+
+            let hora = Number(txt.value)
+            if(hora>=6 && hora<=12){
+
+                mens.innerText = 'Bom dia!'
+                mens.style.backgroundColor = 'lightyellow'
+
+            }else if(hora>=13 && hora<=18){
+
+                mens.innerText = 'Boa tarde!'
+                mens.style.backgroundColor = 'lightsalmon'
+
+            }else{
+                mens.innerText = 'Boa noite!'
+                mens.style.backgroundColor = '#2c3e50'
+                mens.style.color = 'white'
+            }
+        }
+
+        botao.addEventListener('click', clicar)
+        
+    </script>
+</body>
+</html>

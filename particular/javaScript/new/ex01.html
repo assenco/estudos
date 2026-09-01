@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Interagente de Cores</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #bloco {
+            width: 250px; height: 250px; background-color: royalblue;
+            color: white; line-height: 250px; margin: 0 auto;
+            font-size: 1.5rem; font-weight: bold; border-radius: 10px;
+            cursor: pointer; transition: background 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interaja com o Quadrado</h1>
+    <!-- O elemento que você vai manipular no DOM -->
+    <div id="bloco">Passe o mouse...</div>
+
+    <script>
+        // SEU DESAFIO:
+        let blo = document.getElementById('bloco')
+
+        function entrar(){
+            blo.style.backgroundColor='green'
+            blo.innerText = "Entrou!"
+        }
+
+        function sair(){
+            blo.style.backgroundColor='royalblue'
+            blo.innerText = "Passe o mouse..."
+        }
+
+        function clicar(){
+            blo.style.backgroundColor='crimson'
+            blo.innerText = "Clicou!"
+        }
+
+        bloco.addEventListener('mouseenter', entrar)
+        bloco.addEventListener('mouseout', sair)
+        bloco.addEventListener('click', clicar)
+        
+    </script>
+</body>
+</html>

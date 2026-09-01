@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Somador de Números</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input { padding: 10px; font-size: 1.1rem; width: 80px; text-align: center; }
+        button { padding: 10px 20px; font-size: 1.1rem; cursor: pointer; background: #222; color: #fff; border: none; }
+        #resultado { font-size: 1.5rem; font-weight: bold; margin-top: 20px; color: darkgreen; }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" id="txtn1"> +
+    <input type="number" id="txtn2">
+    <button id="btnSomar">Somar</button>
+    
+    <div id="resultado">O resultado aparecerá aqui...</div>
+
+    <script>
+
+        let tx1 = document.getElementById('txtn1')
+        let tx2 = document.getElementById('txtn2')
+        let som = document.getElementById('btnSomar')
+        let res = document.getElementById('resultado')
+        let teste
+
+        function somar(){
+            let n1 = Number(tx1.value)
+            let n2 = Number(tx2.value)
+            valor = n1 + n2
+            res.innerText = valor
+        }
+
+        som.addEventListener('click', somar)
+        
+    </script>
+</body>
+</html>
