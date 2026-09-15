@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+
+    <h1>Conversor Polegada para Milímetro</h1>
+    <section class="calculator">
+
+        <div><h2 class="h2">Calculadora de Conversão</h2></div>
+
+        <div id="option" class="option">
+
+            <input type="radio" id="bPol" name="tipo_conversao" checked>
+            <label for="bPol" class="buttonOption">Polegada -> mm</label>
+            
+            <input type="radio" id="bMM" name="tipo_conversao">
+            <label for="bMM" class="buttonOption">mm -> Polegada</label>
+
+        </div>
+
+        <div id="input" class="input">
+
+            <p>Valor em Polegadas</p>
+            <input id="inp" class="buttonInput" type="number" placeholder="Ex: 0.5">
+            <button id="bCal" class="buttonInput"></button>
+
+        </div>
+
+        <div id="res" class="result hidden">
+            <p>Resultado</p>
+            <p id="out"></p>
+            <p id="tMed"></p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
