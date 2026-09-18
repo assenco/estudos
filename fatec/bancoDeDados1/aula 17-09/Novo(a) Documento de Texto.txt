@@ -1,0 +1,34 @@
+create database Fatec2sem2026 
+
+use Fatec2sem2026
+
+create table departamento (codigo int not null identity(1,1),
+                           departamento varchar(30))
+
+-- comentarios no codigo 
+select * from departamento 
+
+insert into departamento (departamento) values ('TI')
+
+insert into departamento values ('Financeiro'),('Adm'),
+                                ('Engenharia'),('Compras'),
+                                ('Marketing')
+
+alter table departamento add constraint pk_departamento
+                                    primary key (codigo)
+
+insert into departamento values ('Patio')
+
+select * from departamento
+
+update departamento set departamento = 'Fiscal'
+                                       where codigo = 7
+
+delete departamento where codigo = 7
+
+create table funcionario (matricula int not null identity(1,1),
+                          nome varchar(30), salario float, 
+                          codigodepartamento int, 
+             constraint pk_funcionario primary key (matricula))
+
+select * from funcionario 
