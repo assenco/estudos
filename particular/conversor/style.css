@@ -1,131 +1,282 @@
 @charset "UTF-8";
 
+/*Definir fonte para a pagina*/
+* {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
-.calculator {
+.navbar{
+    height: 70px;
+    margin: 0px;
+}
+
+.container{
+    width: 100%;
+    padding: 0;
+}
+
+.navbar-brand{
+    font-size: 50px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    gap: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+    padding: 100px 0px 40px;
+    margin: 0px;
+}
+
+/*Section da calculadora*/
+.sectionCalculadora{
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Div da calculadora*/
+.calculadora {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 2px;
     border-style: solid;
-    border-color: #13083D;
+    border-color: #05074e;
     border-radius: 20px;
-    padding: 30px;
+    padding: 40px;
     gap: 10px;
-    width: max-content;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
 }
 
-h2 {
+/*Titulo dentro da calculadora*/
+.h2Calculadora {
     margin-bottom: 30px;
+    font-weight: 800;
 }
 
-#option input{
+/*Formata o tipo de botao*/
+#divTipoConversao input{
     display: none;
 }
 
-#option{
+/*Div dos botoes de tipo de conversao*/
+#divTipoConversao{
     display: flex;
     justify-content: center;
     gap: 8px;
 }
 
-.buttonOption {
+/*Botoes do tipo de conversao*/
+.tipoConversao {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 150px;
     height: 50px;
-    font-weight: 600;
     font-size: 15px;
-    color: #13083D;
-    border-color: #13083D;
+    color: #05074e;
+    border-color: #05074e;
     border-radius: 10px;
     border-style: solid;
     border-width: 3px;
     cursor: pointer;
 }
 
-.buttonOption:hover {
-    color: #786aac;
-    border-color: #786aac;
+/*Muda estilo do botao de tipo de conversao quando mouse passa por cima*/
+.tipoConversao:hover {
+    color: rgba(122, 108, 175, 0.616);
+    border-color: #4146df8c;
 }
 
-input:checked + .buttonOption {
-    background-color: #13083D;
-    border-color: #13083D;
+/*Muda estilo quando botao de tipo de conversao esta selecionado*/
+input:checked + .tipoConversao {
+    background-color: #05074e;
+    border-color: #05074e;
     color: white;
 }
 
-#input {
+/*Div para digitar o valor e botao de calcular*/
+.divInput {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: max-content;
-    margin: auto;
+    margin-top: 25px;
+    width: 70%;
 }
 
-.input p {
-    margin-bottom: 3px;
+.divInput p {
+    margin: 0px 0px 4px;
+    font-weight: 400;
 }
 
-#inp {
-    border: 2px solid #13083d85;
+/*Campo para digitar valor*/
+.campoInput {
+    font-size: 15px;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #05074e;
     margin-bottom: 20px;
     padding-left: 5px;
 }
 
-#bCal{
+/*Botao de calcular*/
+.botaoInput{
     width: 100%;
     cursor: pointer;
+    font-size: 17px;
     color: white;
-    background-color: #13083D;
-    border: 2px solid #13083D;
-}
-
-.buttonInput {
-    font-weight: 600;
-    font-size: 15px;
-    height: 50px;
+    background-color: #05074e;
+    border: 2px solid #05074e;
     border-radius: 10px;
+    height: 60px;
 }
 
-.result {
+/*Div de exibir resultado*/
+.divResultado {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 150px;
-    width: 400px;
+    width: 70%;
     color: white;
-    background-color: #13083D;
+    background-color: #05074e;
     border-radius: 10px;
     opacity: 1;
     visibility: visible;
     overflow: hidden;
     transform: translateY(0);
-    transition: opacity 0.4s ease, transform 0.4s ease, display 0.4s ease allow-discrete;}
+    transition: opacity 0.4s ease, transform 0.4s ease, display 0.4s ease allow-discrete;
+}
 
-.result p {
+.divResultado p {
     margin: 0px;
 }
 
-#out {
-    font-size: 50px;
-    font-weight: bolder;
+/*Texto em cima do resultado*/
+.textoResultado{
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 12px;
 }
 
+/*Resultado final da conversao*/
+.resultado {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+/*Oculta a div do resultado quando pagina carregada*/
 .hidden {
     opacity: 0 !important;
     display: none !important;
     transform: translateY(-10px) !important;
 }
 
+/*Faztransicao para div do resultado aparecer*/
 @starting-style {
-    .result:not(.hidden) {
+    .divResultado:not(.hidden) {
         opacity: 0;
         transform: translateY(-15px);
+    }
+}
+/*section da div formula*/
+.sectionFormula{
+    padding: 0 15px;
+}
+
+/*Div da explicação da formula utilizada*/
+.formula{
+    text-align: left;
+    margin: auto;
+    background-color: #05074e;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.formula div{
+    padding-top: 20px;
+}
+.formula h3{
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.formula p{
+    width: max-content;
+    padding: 5px;
+    margin-left: 30px;
+    border-radius: 7px;
+    font-size: 20px;
+    background-color: rgba(135, 125, 172, 0.274);
+}
+
+/*Section que contem as duas tabelas*/
+.sectionTabela{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 15px;
+}
+
+/*Div tabela*/
+.tabela{
+    background-color: rgb(234, 234, 238);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    min-width: 360px;
+}
+
+/*Tabela*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela thead{
+    background-color: #05074e;
+    color: white;
+}
+
+.tabela th{
+    padding: 10px;
+}
+
+tbody td{
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .tabelas {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .tabela {
+        min-width: unset;
+        width: 95%;
     }
 }

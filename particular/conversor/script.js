@@ -34,8 +34,11 @@ function executarCalculo(){
 
     let valor = Number(input.value)
 
-     if (input.value === "") {
+    if (input.value === "") {
         alert("Por favor, digite um valor!");
+        return;
+    }else if(valor<0){
+        alert("Por favor, digite um valor positivo!");
         return;
     }
 
