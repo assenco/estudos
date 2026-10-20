@@ -1,0 +1,10 @@
+{
+  "description": "Manage inventory seamlessly for physical and online stores with user-specific access, real-time stock updates, and insightful reporting tools.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
